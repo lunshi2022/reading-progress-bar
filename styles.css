@@ -1,0 +1,59 @@
+/* 阅读进度条容器 */
+.reading-progress-container {
+    position: fixed;
+    bottom: 9px; /* 上下移动 */
+    left: 1280px; /* 左右移动 */
+    width: 160px;  /* 缩短进度条长度 */
+    height: 10px; /* 变细的进度条 */
+    background: #d3d3d3; /* 灰色底色 */
+    border-radius: 4px; /* 调整圆角以适应新高度 */
+    overflow: hidden;
+    z-index: 1000;
+    /* 移除阴影效果 */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+/* 进度条 */
+.reading-progress-bar {
+    height: 100%;
+    width: 0%;
+    background:linear-gradient(45deg, #667eea, #764ba2);; /* 渐变色 linear-gradient(135deg, #ff7e5f, #feb47b)*/
+    border-radius: 4px; /* 调整圆角以适应新高度 */
+    transition: width 0.1s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 进度文本 */
+.reading-progress-text {
+    color: white; /* 确保字体颜色为白色 */
+    font-size: 10px; /* 稍微减小字体大小以适应更细的进度条 */
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .reading-progress-container {
+        bottom: 10px;
+        left: 10px;
+        width: 120px; /* 移动端也相应缩短 */
+    }
+}
+
+/* 暗色主题适配 */
+.theme-dark .reading-progress-container {
+    background: #555; /* 暗色主题下的灰色底色 */
+}
+
+.theme-light .reading-progress-container {
+    background: #d3d3d3; /* 亮色主题下的灰色底色 */
+    border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.theme-light .reading-progress-text {
+    color: white; /* 亮色主题下也保持白色文字 */
+}

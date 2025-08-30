@@ -1,0 +1,10 @@
+{
+  "id": "reading-progress-bar",
+  "name": "Reading Progress Bar",
+  "version": "2.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "一个在Obsidian显示阅读进度条的插件",
+  "author": "先生",
+  "authorUrl": "https://your-website.com",
+  "isDesktopOnly": false
+}
